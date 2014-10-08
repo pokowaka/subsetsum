@@ -20,8 +20,6 @@ Notes & Todo's
 -----
 * It doesn't include any pseudo polyonomial or approximization strategies.
 * Some algorithms could be improved by making use of heuristics, this is something still open for exploration.
-* It appears that the MultiSubsetSumStrategy2b performs the fastest on average. 
-This seems to be the way to go if you have the memory available.
 
 Some results:
 -----
