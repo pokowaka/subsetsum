@@ -33,14 +33,12 @@ various algorithms:
 |---------------------------|:--------:|-----------:|
 | NaiveSubsetSumStrategy    |  28      | 18686      |
 | NaiveSubsetSumStrategy    |  29      | 37831      |
-|                           |          |            |
 | MultiSubsetSumStrategy2a  |  28      | 717        |
 | MultiSubsetSumStrategy2a  |  29      | 1415       |
-|                           |          |            |
 | MultiSubsetSumStrategy2b  |  28      | 94         |
 | MultiSubsetSumStrategy2b  |  29      | 189        |
-|                           |          |            |
 | RecursiveSubsetSumStrategy|  28      | 990        |
 | RecursiveSubsetSumStrategy|  29      | 1576       |
-|---------------------------|----------|------------|
 
+It looks like ```MultiSubsetSumStrategy2b``` is the winner here. The
+only drawback about this one is that it uses O(2^n) space.. 
