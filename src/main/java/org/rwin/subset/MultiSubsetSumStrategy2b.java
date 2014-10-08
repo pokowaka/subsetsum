@@ -3,12 +3,19 @@ package org.rwin.subset;
 /**
  * Time complexity O(2^n-1) Space complexity O(2^n)
  * 
- * This is a slight optimization of alg 2a. We divide the sets in two.
+ * This is a slight optimization of alg 2a. We divide the sets in two, and than
+ * combine them in the end to find the final result. i.e. we calculate sum[i] +
+ * sum[j].
+ * 
+ * There are 3 cases:
+ * 
+ * 1) The sum is in the first subset. We will find it because sum2[0] = 0. 2)
+ * The sum is contained in both subsets. We will find it because sum[i] + sum[j]
+ * == total 3) The sum is in the second ubset. We will find it because sum[0] =
+ * 0.
  * 
  * This algorithm performs surprisingly well. If you have memory to spare it
  * outperforms the recursive strategy.
- * 
- * There are no heuristics right now that could make it go faster.
  * 
  * @author erwinj
  *
@@ -45,8 +52,7 @@ public class MultiSubsetSumStrategy2b implements SubsetSumStrategy {
             for (int j = 0; j < sum2.length; j++) {
                 if (sum[i] + sum2[j] == total) {
                     // Found it!
-                    // bitmask lower array combination[i];
-                    // bitmask higher array.
+                    // Just adjust the bitmasks properly...
                     return i | j << r;
                 }
             }

@@ -1,7 +1,14 @@
 package org.rwin.subset;
 
 /**
- * O(n*2^n), space O(lg n) 
+ * This is pretty much the first solution that might spring to  mind. It is clearly very slow.
+ *
+ * Basically it calculates the powerset of e, and then the summation of every set in the powerset until
+ * we have found the set that sums up to the number we are looking for.
+ * 
+ * There is a slight optimization in the sense the we will stop calculating the sum.
+ * 
+ * O(n*2^n), space O(lg n).. 
  * @author erwinj
  *
  */
